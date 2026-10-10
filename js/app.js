@@ -1,6 +1,7 @@
 /* =========================================================
    SIDODADI LAND GIS
    MAIN JAVASCRIPT - FULL VERSION (FIXED)
+
 ========================================================= */
 
 
@@ -224,16 +225,17 @@ $("clearMeasureBtn").addEventListener("click", function() {
 
 /* =========================================================
    BATAS DESA SIDODADI
+   ✅ DISESUAIKAN: Batas_Desa_Sidodadi.geojson
 ========================================================= */
 
 async function loadBatasDesa() {
 
     try {
 
-        const response = await fetch("data/batas_desa_sidodadi.geojson");
+        const response = await fetch("data/Batas_Desa_Sidodadi.geojson");
 
         if (!response.ok) {
-            throw new Error("File batas_desa_sidodadi.geojson tidak ditemukan.");
+            throw new Error("File Batas_Desa_Sidodadi.geojson tidak ditemukan.");
         }
 
         const data = await response.json();
@@ -276,6 +278,7 @@ loadBatasDesa();
 
 /* =========================================================
    GEOJSON LOADER (BIDANG TANAH)
+   ✅ DISESUAIKAN: Bidang_Tanah.geojson
 ========================================================= */
 
 async function loadGeoJSON() {
@@ -284,10 +287,10 @@ async function loadGeoJSON() {
 
         notify("Memuat data bidang tanah...");
 
-        const response = await fetch("data/bidang_tanah.geojson");
+        const response = await fetch("data/Bidang_Tanah.geojson");
 
         if (!response.ok) {
-            throw new Error("File bidang_tanah.geojson tidak ditemukan.");
+            throw new Error("File Bidang_Tanah.geojson tidak ditemukan.");
         }
 
         const data = await response.json();
@@ -1620,16 +1623,17 @@ function hakKosongStyle() {
 
 /* =========================================================
    LOAD HAK MILIK
+   ✅ DISESUAIKAN: Hak_Milik.geojson
 ========================================================= */
 
 async function loadHakMilik() {
 
     try {
 
-        const response = await fetch("data/hak_milik.geojson");
+        const response = await fetch("data/Hak_Milik.geojson");
 
         if (!response.ok) {
-            throw new Error("hak_milik.geojson tidak ditemukan.");
+            throw new Error("Hak_Milik.geojson tidak ditemukan.");
         }
 
         const data = await response.json();
@@ -1688,16 +1692,17 @@ async function loadHakMilik() {
 
 /* =========================================================
    LOAD HAK KOSONG
+   ✅ DISESUAIKAN: Hak_Kosong.geojson
 ========================================================= */
 
 async function loadHakKosong() {
 
     try {
 
-        const response = await fetch("data/hak_kosong.geojson");
+        const response = await fetch("data/Hak_Kosong.geojson");
 
         if (!response.ok) {
-            throw new Error("hak_kosong.geojson tidak ditemukan.");
+            throw new Error("Hak_Kosong.geojson tidak ditemukan.");
         }
 
         const data = await response.json();
@@ -2061,6 +2066,7 @@ function jalanEvents(feature, layer) {
 
 /* =========================================================
    LOAD GEOJSON JALAN
+   ✅ DISESUAIKAN: Jalan.geojson
 ========================================================= */
 
 async function loadJalan() {
@@ -2069,11 +2075,10 @@ async function loadJalan() {
 
         notify("Memuat data jalan...");
 
-        // ✅ DIPERBAIKI: sebelumnya "data/alan.geojson" (typo)
-        const response = await fetch("data/jalan.geojson");
+        const response = await fetch("data/Jalan.geojson");
 
         if (!response.ok) {
-            throw new Error("File jalan.geojson tidak ditemukan.");
+            throw new Error("File Jalan.geojson tidak ditemukan.");
         }
 
         const data = await response.json();
@@ -2113,7 +2118,7 @@ async function loadJalan() {
 
         console.error("Gagal memuat Jalan:", error);
 
-        notify("Data Jalan belum dapat dimuat. Pastikan jalan.geojson berada di folder data.");
+        notify("Data Jalan belum dapat dimuat. Pastikan Jalan.geojson berada di folder data.");
 
     }
 
